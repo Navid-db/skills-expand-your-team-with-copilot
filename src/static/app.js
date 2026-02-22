@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Dark mode toggle functionality
   const darkModeToggle = document.getElementById("dark-mode-toggle");
   const darkModeIcon = darkModeToggle.querySelector(".icon");
-  const darkModeText = darkModeToggle.querySelector("span:last-child");
+  const darkModeText = darkModeToggle.querySelector(".mode-text");
 
   // Check for saved dark mode preference
   const isDarkMode = localStorage.getItem("darkMode") === "true";
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
       darkModeText.textContent = "Dark";
     }
     
-    // Save preference to localStorage
-    localStorage.setItem("darkMode", isDark);
+    // Save preference to localStorage as string
+    localStorage.setItem("darkMode", String(isDark));
   });
 
   // DOM elements
