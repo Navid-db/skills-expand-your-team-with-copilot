@@ -536,7 +536,9 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     // Create difficulty badge if difficulty is specified
-    const difficultyBadge = details.difficulty ? `
+    // Validate difficulty value to prevent XSS
+    const validDifficulties = ['Beginner', 'Intermediate', 'Advanced'];
+    const difficultyBadgeHtml = details.difficulty && validDifficulties.includes(details.difficulty) ? `
       <span class="difficulty-badge difficulty-${details.difficulty.toLowerCase()}">
         ${details.difficulty}
       </span>
@@ -558,7 +560,7 @@ document.addEventListener("DOMContentLoaded", () => {
     activityCard.innerHTML = `
       <div class="card-header-tags">
         ${tagHtml}
-        ${difficultyBadge}
+        ${difficultyBadgeHtml}
       </div>
       <h4>${name}</h4>
       <p>${details.description}</p>
