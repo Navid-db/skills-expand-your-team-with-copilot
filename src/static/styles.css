@@ -191,6 +191,7 @@ section h3 {
 }
 
 /* Activity Tag */
+/* Note: Activity tag and difficulty badge rely on .card-header-tags parent container for proper layout */
 .card-header-tags {
   display: flex;
   justify-content: flex-end;

@@ -35,6 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
     technology: { label: "Technology", color: "#e8eaf6", textColor: "#3949ab" },
   };
 
+  // Difficulty levels and class mapping for validation and rendering
+  const validDifficulties = ['Beginner', 'Intermediate', 'Advanced'];
+  const difficultyClassMap = {
+    'Beginner': 'difficulty-beginner',
+    'Intermediate': 'difficulty-intermediate',
+    'Advanced': 'difficulty-advanced'
+  };
+
   // State for activities and filters
   let allActivities = {};
   let currentFilter = "all";
@@ -537,12 +545,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Create difficulty badge if difficulty is specified
     // Validate difficulty value to prevent XSS
-    const validDifficulties = ['Beginner', 'Intermediate', 'Advanced'];
-    const difficultyClassMap = {
-      'Beginner': 'difficulty-beginner',
-      'Intermediate': 'difficulty-intermediate',
-      'Advanced': 'difficulty-advanced'
-    };
     const difficultyBadgeHtml = details.difficulty && validDifficulties.includes(details.difficulty) ? `
       <span class="difficulty-badge ${difficultyClassMap[details.difficulty]}">
         ${details.difficulty}
