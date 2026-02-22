@@ -864,7 +864,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const textArea = document.createElement("textarea");
         textArea.value = textToCopy;
         textArea.style.position = "fixed";
-        textArea.style.left = "-999999px";
+        textArea.style.top = "0";
+        textArea.style.left = "-9999px";
+        textArea.style.opacity = "0";
         document.body.appendChild(textArea);
         textArea.select();
         try {
