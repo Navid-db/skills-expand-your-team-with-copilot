@@ -66,3 +66,15 @@ These dependencies will be installed when you run `pip install -r src/requiremen
 
 > [!IMPORTANT]
 > All data is stored in memory, which means data will be reset when the server restarts.
+
+## Features
+
+### Social Sharing
+
+Each activity card includes social sharing buttons that allow users to share activities with their friends:
+
+- **Twitter/X**: Share activity details on Twitter
+- **Facebook**: Share activity details on Facebook
+- **Copy Link**: Copy activity information and website link to clipboard for easy sharing
+
+The sharing feature works for all users (students and teachers) and includes the activity name, description, and a link to the website.
