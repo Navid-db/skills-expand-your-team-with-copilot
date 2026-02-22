@@ -727,10 +727,6 @@ footer {
 }
 
 /* Adjust user-controls position when dark mode toggle is present */
-body:not(.dark-mode) #user-controls {
-  right: 130px;
-}
-
-body.dark-mode #user-controls {
+#user-controls {
   right: 130px;
 }
